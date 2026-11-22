@@ -2,15 +2,18 @@
 // All data is stored on the phone in localStorage. No accounts, no server.
 
 const HABITS = [
-  { id: "movement",   label: "Movement",        emoji: "🚶" },
-  { id: "rehab",      label: "Rehab exercises", emoji: "🦵" },
-  { id: "meditation", label: "Meditation",      emoji: "🧘" },
-  { id: "yoga",       label: "Yoga",            emoji: "🌿" },
-  { id: "eating",     label: "Healthy eating",  emoji: "🥗" },
   { id: "journal",    label: "Journalling",     emoji: "📓" },
+  { id: "read",    label: "Reading",     emoji: "📓" },
+  { id: "sun salutations", label: "Daily 3 sun salutations",      emoji: "🧘" },
+  { id: "yoga",       label: "Yoga",            emoji: "🌿" },
+  { id: "knee",      label: "Knee exercises", emoji: "🦵" },
+  { id: "meditation", label: "Meditation",      emoji: "🧘" },
+  { id: "morning walk",   label: "Morning Light",        emoji: "🚶" }, 
+  { id: "eating",     label: "Healthy eating",  emoji: "🥗" },
+  
 ];
 
-const WATER_GOAL = 8; // glasses per day. Change this number to suit you.
+const WATER_GOAL = 3; // litres per day. Change this number to suit you.
 
 const MANTRAS = [
   "I am doing what I can, and that is enough.",
@@ -140,7 +143,7 @@ function renderToday() {
     <section class="card">
       <h2>💧 Water</h2>
       <div class="water-row">
-        <span class="water-count">${day.water} / ${WATER_GOAL} glasses</span>
+        <span class="water-count">${day.water} / ${WATER_GOAL} litres</span>
         <span>
           <button class="ghost" id="water-minus">−</button>
           <button id="water-plus">+ Glass</button>
